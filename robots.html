@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mr. Robot!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+	<script src="https://use.fontawesome.com/23590965c7.js"></script>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				 aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					 </button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+					<li><a href="robots.html">Sports Cars</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input id="form-control" class="form-control" onkeyup="searchInMe()" placeholder="Search">
+					</div>
+				</form>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<fieldset class="frame">
+		<legend class="miniframeame"><strong>Mr. Robot's Top Sports Car Models</strong></legend>
+		<ul id="ul">
+			<li>
+				<div id="glow">
+					<article class="miniframeame">
+						<h4><label for="imgrobo1">Model: </label> BMW</h4>
+						<div class="purchase">
+							<p class="price">$40,000.86</p>
+							<button type="button">Purchase</button>
+						</div>
+						<img id="imgrobo" class="img-thumbnail" src="images/bmw.jpeg" alt="robo1">
+						<h5><strong>Description:</strong><br>Very fast and reliable sports car.</h5>
+					</article>
+				</div>
+			</li>
+			<li>
+				<div id="glow1">
+					<article class="miniframeame">
+						<h4><label for="imgrobo2">Model: </label> Mercedes Sport</h4>
+						<div class="purchase">
+							<p class="price">$65,000</p>
+							<button type="button">Purchase</button>
+						</div>
+						<img id="imgrobo" class="img-thumbnail" src="images/yellow-car.jpg" alt="robo1">
+						<h5><strong>Description:</strong> <br>This is on of Elliots personal favorites. This is the car for you if you like to go fast</h5>
+					</article>
+				</div>
+			</li>
+			<li>
+				<div id="glow2">
+					<article class="miniframeame">
+						<h4><label for="imgrobo3">Model: </label> Porsche</h4>
+						<div class="purchase">
+							<p class="price">$50,000.99</p>
+							<button type="button">Purchase</button>
+						</div>
+						<img id="imgrobo" class="img-thumbnail" src="images/porsche.jpg" alt="robo1">
+						<h5><strong>Description:</strong> <br>This one is for the ladies! ;)</h5>
+					</article>
+				</div>
+			</li>
+		</ul>
+	</fieldset>
+	<footer class="footer">
+		<div class="social">
+			<!--Facebook-->
+			<a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+			<!--Twitter-->
+			<a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+			<!--Google +-->
+			<a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>
+			<!--Linkedin-->
+			<a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+		</div>
+		<p class="ouradd">Our address is
+			<address class="addrs">1011 Crater Ave, Moon City: THE MOON</address>
+		</p>
+		<p class="ouradd">All site contents is copyright <a href="http://www.mrrobot.com">Mr Robot!</a></p>
+		<p class="text">This page was generated on
+			<time>09:25:04.123</time>.</p>
+	</footer>
+	<template id="producttemplate">
+		<article>
+			<label id="lblName" for="productimage">Name:</label>
+			<img id="pimage" name="productimage" class="productarticlelargeimage" src="" alt="product image">
+			<article name="productdescription" class="productarticledescription">
+			</article>
+		</article>
+	</template>
+	<template id="user">
+		<div>User</div>
+		<template id="address">
+			<div>Address</div>
+		</template>
+	</template>
+<!-- <script>
+		var robo = document.querySelector('#robo1').createShadowRoot();
+		/*Step1*/
+		let prdTemplate = document.querySelector('#producttemplate');
+		/*Step2*/
+		let clone = document.importNode(prdTemplate.content, true);
+		/*Step3*/
+
+		clone.querySelector('#pimage').src = 'images/roboDog.png';
+		clone.querySelector('#lblName').textContent = 'R.E.T';
+
+		/*Step4*/
+		robo.appendChild(clone);
+		let userTemplate = document.querySelector('#user');
+		let userClone = document.importNode(userTemplate.content, true);
+		document.body.appendChild(userClone);
+		let addressTemplate = document.querySelector('#address');
+		let addressClone = document.importNode(addressTemplate.content, true);
+		document.body.appendChild(addressClone);
+	</script> -->
+
+	<script>
+		$(document).ready(function () {
+
+			$("#glow").mouseover(function () {
+				$("#glow").addClass("inpinteract");
+			});
+			$("#glow").mouseout(function () {
+				$("#glow").removeClass("inpinteract")
+			});
+
+			$("#glow1").mouseover(function () {
+				$("#glow1").addClass("inpinteract");
+			})
+			$("#glow1").mouseout(function () {
+				$("#glow1").removeClass("inpinteract")
+			});
+
+			$("#glow2").mouseover(function () {
+				$("#glow2").addClass("inpinteract");
+			})
+			$("#glow2").mouseout(function () {
+				$("#glow2").removeClass("inpinteract")
+			});
+
+			$("#textlight").keydown(function () {
+				$("#textlight").addClass("borderme")
+			});
+		});
+	</script>
+	<script>
+		function searchInMe() {
+
+			var input, filter, ul, li, h4, i;
+
+			input = document.getElementById('form-control');
+			filter = input.value.toUpperCase();
+			ul = document.getElementById("ul");
+			li = ul.getElementsByTagName('li');
+
+			// Loops through the name of each robot and displays the one that matches query
+			for (i = 0; i < li.length; i++) {
+				h4 = li[i].getElementsByTagName("h4")[0];
+				if (h4.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>

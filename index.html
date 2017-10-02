@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mr. Robot!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://use.fontawesome.com/23590965c7.js"></script>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="pageLoader()">
+	<div id="loader"></div>
+	<div style="display:none" id="myDiv" class="animate-bottom">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					 aria-expanded="false">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+					<a class="navbar-brand" href="#"><img src="images/logo.jpgd"</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+						<li><a href="robots.html">Sports Cars</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+
+					</form>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<img class="img-responsive" src="images/redcar.jpg" height="400px" width="100%">
+		<section class="written">
+			<header class="hedindex">Welcome to Mr Robot's Sports Car Dealership</header>
+			<span class="blok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lobortis ex. Suspendisse vestibulum varius porta. 
+                        Ut ligula risus, fermentum nec elit eget, feugiat consequat diam. Donec accumsan tristique convallis. 
+                        Curabitur sit amet facilisis sapien.
+                    </p>
+                    <p>
+                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sollicitudin augue et metus volutpat pellentesque. 
+                        Maecenas dui quam, iaculis at massa in, varius varius lectus.
+                        Fusce efficitur justo sed lobortis efficitur. Sed vel quam at mi tristique convallis non id justo. 
+                    </p>
+                    <p>
+                    <br>
+                        Vestibulum molestie odio sed congue tempor. Mauris at nisl a risus finibus efficitur. Mauris quis luctus erat, id auctor tellus. Nulla vel suscipit metus. 
+                        Donec porta dapibus eros et finibus.
+                    </p>
+                    <p>
+                        Maecenas suscipit nisl sed dictum luctus. Proin suscipit laoreet ante a dictum. Donec ornare, erat quis dignissim maximus, neque ex laoreet massa, sed convallis turpis turpis ut elit. 
+                    </p>
+                    <p>
+                        Suspendisse varius augue ante, sed fermentum dui facilisis non. Nulla neque leo, placerat ut tempor quis, ornare sed lorem. Mauris egestas sem non magna semper lobortis.
+                    </p>
+                    <p><mark>Note that our store is closed on Christmas Eve and Christmas Day.</mark></p>
+                </span>
+		</section>
+		<footer class="footer">
+			<div class="social">
+				<!--Facebook-->
+				<a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+				<!--Twitter-->
+				<a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+				<!--Google +-->
+				<a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>
+				<!--Linkedin-->
+				<a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+			</div>
+			<p class="ouradd">Our address is
+				<address class="addrs">1011 Crater Ave, Moon City: THE MOON</address>
+			</p>
+			<p class="ouradd">All site contents is copyright <a href="http://www.mrrobot.com">Mr Robot!</a></p>
+			<p class="text">This page was generated on
+				<time>09:25:04.123</time>.</p>
+		</footer>
+	</div>
+	<script>
+		var myVar;
+
+		function pageLoader() {
+			myVar = setTimeout(showPage, 1200);
+		}
+
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
+	</script>
+</body>
+
+</html>
